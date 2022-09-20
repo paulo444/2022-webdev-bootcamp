@@ -1,0 +1,10 @@
+body {
+    background-color: aquamarine;
+}
+
+hr {
+    border-style: dotted none none none;
+    border-top-width: 10px;
+    width: 10%;
+    border-color: gainsboro;
+}

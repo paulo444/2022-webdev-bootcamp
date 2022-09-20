@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+
+<h1>Homeeee</h1>
+<p> <%=startingContent%> </p>
+<div class="post-separation"></div>
+
+<% allPosts.forEach(function(post) { %>
+    <% let postRef ="/posts/" + post.title; %>
+    <% postRef = postRef.replace(" ", "%20")%>
+    <div>
+        <h1> <%=post.title %> </h1>
+        <p> <%=post.content %> ... <a href= <%= postRef %> >Read More</a> </p>
+    </div>
+<% }); %>
+
+<%- include('partials/footer'); -%>

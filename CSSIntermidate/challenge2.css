@@ -1,0 +1,32 @@
+body{
+    margin: 0px;
+}
+
+div{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.box-size{
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+    position: relative;
+}
+
+.blue-box{
+    background-color: aqua;
+    bottom: 200px;
+}
+
+.red-box{
+    background-color: red;
+    left: 400px;
+}
+
+.yellow-box{
+    background-color: yellow;
+    bottom: 400px;
+    left: 200px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1><%=day%></h1>
+    </div>
+
+    <div class="box">
+        <% for(var i=0; i<todoList.length; i++ ) { %>
+            <div class="item">
+                <form action="/deleteItem" method="post">
+                    <% if(todoList[i].done) { %>
+                        <input type="checkbox" onchange="this.form.submit()" id="check" name="check" value=<%=todoList[i]._id%> checked>
+                    <% } else { %>
+                        <input type="checkbox" onchange="this.form.submit()" id="check" name="check" value=<%=todoList[i]._id%>>
+                    <% } %>
+                        <input type="hidden" name="title" id="title" value=<%=day%>>
+                </form>
+                <p> <%=todoList[i].activity%> </p>
+            </div>
+        <% } %>
+
+        <form class="item"  action="/" method="post">
+            <input type="text" name="todoItem" id="todoItem" placeholder="New Item" autocomplete="off">
+            <input type="hidden" name="title" id="title" value=<%=day%>>
+            <button type="submit" value="Add to list">+</button>
+        </form>
+    </div>
+    
+</body>
+</html>
